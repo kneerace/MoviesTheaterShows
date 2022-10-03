@@ -1,0 +1,27 @@
+{
+  "name": "starter-name-generator",
+  "version": "1.0.0",
+  "description": "MoviesTheaterShows",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kneerace/MoviesTheaterShows"
+  },
+"engines": {
+    "node": "16.13.2",
+    "npm": "8.1.2"
+  },
+  "scripts": {
+    "build": "npm -prefix MoviesTheaterShows_FrontEnd run build",
+    "preinstall": "cd ./MoviesTheaterShow_BackEnd && npm install",
+    "install": "cd ./MoviesTheaterShows_FrontEnd && npm install",
+    "start": "npx concurrently 'npm run start:MoviesTheaterShow_BackEnd' 'npm run start:MoviesTheaterShows_FrontEnd'",
+    "start:backend": "npm --prefix ./MoviesTheaterShow_BackEnd start",
+    "start:client": "npm --prefix ./MoviesTheaterShows_FrontEnd start",
+    "start:dev": "npx concurrently 'npm run start:dev --prefix ./MoviesTheaterShow_BackEnd' 'npm start --prefix ./MoviesTheaterShows_FrontEnd'",
+    "test": "npm run test:MoviesTheaterShows_FrontEnd && npm run test:MoviesTheaterShow_BackEnd"
+  },
+  "keywords": [],
+  "author": "Niresh Shrestha",
+  "license": "UNLICENSED"
+}
