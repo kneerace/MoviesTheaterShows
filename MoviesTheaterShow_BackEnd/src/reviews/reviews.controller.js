@@ -46,11 +46,11 @@ async function destroy(req, res){
 async function update(req, res){
     const reqBodyData = req.body.data;
     const reviewId = req.params.reviewId;
-    console.log("update::: ", reviewId , ' ::: ', reqBodyData ,'\n==============')
+    // console.log("update::: ", reviewId , ' ::: ', reqBodyData ,'\n==============')
      const updatedReview = 
            await reviewService.update(reviewId, reqBodyData);
 //       const updatedReview = await reviewService.read(reviewId);
-  console.log("uupdatedReview:::> ", updatedReview)
+//   console.log("uupdatedReview:::> ", updatedReview)
         updatedReview.critic = await reviewService.listCritics(updatedReview.critic_id)
      res.json({data:updatedReview})
     }
