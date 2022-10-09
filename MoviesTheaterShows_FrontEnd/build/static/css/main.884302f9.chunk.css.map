@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAIA,oCAHE,gCAMF,CAHA,sBAEE,eACF","file":"main.884302f9.chunk.css","sourcesContent":[".font-poppins {\n  font-family: Poppins, \"sans-serif\";\n}\n\n.font-poppins-heading {\n  font-family: Poppins, \"sans-serif\";\n  font-weight: 700;\n}\n"]}
