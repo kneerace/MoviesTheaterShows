@@ -15,7 +15,7 @@
     "build": "npm -prefix MoviesTheaterShows_FrontEnd run build",
     "preinstall": "cd ./MoviesTheaterShow_BackEnd && npm install",
     "install": "cd ./MoviesTheaterShows_FrontEnd && npm install",
-    "start": "npx concurrently 'npm run start:MoviesTheaterShow_BackEnd' 'npm run start:MoviesTheaterShows_FrontEnd'",
+    "start": "npx concurrently 'npm run start:./MoviesTheaterShow_BackEnd' 'npm run start:./MoviesTheaterShows_FrontEnd'",
     "start:backend": "npm --prefix ./MoviesTheaterShow_BackEnd start",
     "start:client": "npm --prefix ./MoviesTheaterShows_FrontEnd start",
     "start:dev": "npx concurrently 'npm run start:dev --prefix ./MoviesTheaterShow_BackEnd' 'npm start --prefix ./MoviesTheaterShows_FrontEnd'",
