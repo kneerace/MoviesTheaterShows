@@ -1,7 +1,6 @@
 const movieService = require("./movies.service");
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 const { as } = require("../db/connection");
-const mapProperties = require("../utils/map-properties");
 
 async function movieExists(req, res, next){
     // console.log("movies.controller::movieExists::::", req.params.movieId ,"\n")
@@ -19,11 +18,11 @@ async function movieExists(req, res, next){
 
 async function list(req, res){
     const query = req.query.is_showing;
-    console.log("list:::query::: ", query);
+    // console.log("list:::query::: ", query);
 
     const data = (query==="true") ? await movieService.listIsShowing() : await movieService.list();
 //   const data = await movieService.list();
-  console.log('listcontroller::: ', data)
+//   console.log('listcontroller::: ', data)
     res.json({data});
 }
 
