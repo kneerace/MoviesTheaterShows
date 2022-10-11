@@ -10,7 +10,12 @@ const moviesRouter = require("./movies/movies.router");
 const reviewRouter = require("./reviews/reviews.router");
 const theaterRouter = require("./theaters/theaters.router")
 
-app.use(cors());
+// app.use(cors());
+app.use(cors(
+    {
+    origin:'https://movies-theater-shows-front-end.vercel.app'
+}
+));
 app.use(express.json());
 
 app.use("/movies", moviesRouter);
